@@ -8,7 +8,6 @@ const app = express();
 const cors = require("cors");
 app.use(cors());
 
-
 //capturar el cuerpo de las peticiones
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
@@ -25,7 +24,7 @@ mongoose.connect(uri, option)
 .then(() => console.log("Base de datos conectada correctamente"))
 .catch((e) => console.log("Error en la conexión " + e));
 
-//if (process.env.NODE_ENV === 'production') {app.use(express.static('../frontend/build'));}
+
 
 //importar las rutas
 const {product_routes} = require('./routes');
