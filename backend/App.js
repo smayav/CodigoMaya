@@ -25,8 +25,6 @@ mongoose.connect(uri, option)
 .then(() => console.log("Base de datos conectada correctamente"))
 .catch((e) => console.log("Error en la conexión " + e));
 
-if (process.env.NODE_ENV === 'production') {app.use(express.static('../frontend/build'));}
-
 //importar las rutas
 const {product_routes} = require('./routes');
 const {vending_routes} = require('./routes');
